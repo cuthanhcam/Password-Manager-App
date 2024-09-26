@@ -1,0 +1,25 @@
+﻿<Window x:Class="PasswordManagerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Password Manager" Height="381" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="422*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Domain:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <TextBox Name="txtDomain" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Margin="5,14,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+        <PasswordBox Name="txtPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Margin="5,54,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <Label Content="Master Key:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Grid.ColumnSpan="2"/>
+        <PasswordBox Name="txtMasterKey" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Margin="5,94,0,0" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        <Button Content="Save Password" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="5,130,0,0" Click="SavePassword_Click" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Content="View Passwords" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="120,130,0,0" Click="ViewPasswords_Click" Grid.Column="2"/>
+        <Button Content="Delete Password" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="261,130,0,0" Click="DeletePassword_Click" Grid.Column="2"/>
+        <ListBox Name="lstPasswords" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="400" Margin="5,170,0,0" Grid.Column="1" MouseDoubleClick="lstPasswords_MouseDoubleClick" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>
