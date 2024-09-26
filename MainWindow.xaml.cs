@@ -12,6 +12,7 @@ namespace PasswordManagerApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// second commit
     public class EncryptionService
     {
         public static string Encrypt(string plainText, string key)
